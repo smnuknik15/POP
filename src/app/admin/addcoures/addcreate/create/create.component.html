@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/css?family=Athiti&amp;subset=thai" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet" type="text/css">
+
+<style>
+  body {
+	font-family: 'Athiti', sans-serif;
+  }h1,h2,h3{font-family: 'Athiti', sans-serif;}
+  .form-control.ng-invalid.ng-touched:not(:focus){
+        border-color: red;
+    
+    }
+  </style>
+<div class="container">
+    <form [formGroup]="Form" (submit) = "onSubmit()">
+      <h3>เพิ่มข้อมูลคอร์ส</h3>
+        <div class="form-row" >
+          <div class="form-group">
+            <label for="inputEmail4">รหัสคอร์ส</label>
+            <input type="text"  mdbInputDirective formControlName="courseId" class="form-control"  placeholder="รหัสคอร์ส">
+          </div>
+        
+        <div class="form-group ">
+            <label for="inputPassword4">ชื่อคอร์ส</label>
+            <input type="text" mdbInputDirective formControlName="courseName" class="form-control" placeholder="ชื่อคอร์ส">
+          </div>
+        <div class="form-group">
+          <label for="inputAddress4">ราคา</label>
+          <input type="text" mdbInputDirective formControlName="coursePrice" class="form-control"  placeholder="ราคา">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">วันที่</label>
+            <input type="text" mdbInputDirective formControlName="courseDate" class="form-control" placeholder="วันที่">
+          </div>
+      
+          <div class="form-group">
+              <label for="inputAddress">จำนวนชั่วโมง</label>
+              <input type="email" mdbInputDirective formControlName="courseHourNum" class="form-control" placeholder="จำนวนชั่วโมง">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">รายละเอียด</label>
+                <input type="email" mdbInputDirective formControlName="courseDetail" class="form-control" placeholder="รายละเอียด">
+              </div>
+
+      </div>
+       <div class="row">
+          <button type="submit" class="btn btn-success">บันทึก</button>
+      </div>
+      </form>
+    
+</div> 
